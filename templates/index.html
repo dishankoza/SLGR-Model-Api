@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        .controls {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            background: #088e80;
+        }
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Live Streaming Demonstration</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h3 class="mt-5">User A</h3>
+            <img src="{{ url_for('processed_video_feed') }}" width="100%">
+        </div>
+        <div class="col-lg-6">
+            <h3 class="mt-5">User B</h3>
+            <img src="{{ url_for('normal_video_feed') }}" width="100%">
+        </div>
+    </div>
+</div>
+<div class="d-flex controls p-5">
+    <button class="btn" id="mic" type="button" onclick="miceToggle()"><i class="fas fa-microphone"></i> Mute</button>
+    <button class="btn ml-5" id="camera" type="button" onclick="videoToggle()"><i class="fas fa-video"></i> Stop Video</button>
+    <button class="btn ml-5" id="camera" type="button" onclick="videoToggle()"><i class="fas fa-video"></i> Leave</button>
+
+  </div>
+</body>
+</html>
